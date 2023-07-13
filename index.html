@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>The Daily Prophet</title>
+        <link rel = "icon" href = "daily_prophet_logo_by_credechica4_d8s0wyw-pre.png" type = "image/x-icon">
+    </head>
+    <body>
+        <nav>
+            <div class="home_nav container flex">
+                <div class="link-logo"><img src="daily_prophet_logo_by_credechica4_d8s0wyw-pre.png" class="logo" onclick="reload()"></div>
+                <div class="nav_links">
+                    <ul class="flex">
+                        <li class="nav-item" id="Politics" onclick="onNaveItemClick('Politics')">Politics</li>
+                        <li class="nav-item" id="Economic" onclick="onNaveItemClick('Economic')">Economic</li>
+                        <li class="nav-item" id="Health" onclick="onNaveItemClick('Health')">Health</li>
+                        <li class="nav-item" id="Science" onclick="onNaveItemClick('Science')">Science</li>
+                        <li class="nav-item" id="sports" onclick="onNaveItemClick('sports')">sports</li>
+                    </ul>
+                </div>
+                <div class="search_bar flex">
+                    <input id="search-text" type="text" class="search" placeholder="search">
+                    <button id="search_button" class="search_button">search</button>
+                </div>
+            </div>
+        </nav>
+        <!-- sidebar -->
+        <div class="sidebar">
+            <label class="switch">
+                <input type="checkbox" id="desc1" class="ckeck" onclick="sort()">
+                <span class="slider round"></span>
+            </label><label class="desc" for="desc1" >Descending</label>
+            <input type="radio" class="radio" id="date" name="sort" value="date" onclick="sort()">
+            <label for="date" class="sort-radio">Date Published</label><br>
+            <!-- <input type="radio" class="radio" id="popularity" name="sort" value="popularity" onclick="sort()">
+            <label for="popularity" class="sort-radio">Popularity Of Source</label><br> -->
+            <input type="radio" class="radio" id="relevancy" name="sort" value="relevancy" onclick="sort()" checked="checked">
+            <label for="relevancy" class="sort-radio">relevancy</label>
+        </div>
+        <main>
+            <div class="cards container flex" id="cards-container"></div>
+        </main>
+<template id="card-temp">
+    <div class="card">
+        <div class="card-header">
+            <img src="" alt="" id="news-img">
+        </div>
+        <div class="card-contant">
+            <h3 id="news-title"></h3>
+            <h6 class="news-source" id="news-source">/h6>
+            <p class="news-desc" id="news-desc"></p>
+        </div>
+    </div>
+</template>
+
+        <script src="home.js"></script>
+    </body>
+</html>
